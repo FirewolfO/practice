@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：用双指针依次比较两个有序链表的当前节点，把较小节点接到结果链表后面。
+// 关键点：虚拟头节点简化头部连接，循环结束后直接接上未遍历完的链表。
+// 复杂度：时间 O(m+n)，空间 O(1) 额外空间。
 /**
  * Definition for singly-linked list.
  * type ListNode struct {

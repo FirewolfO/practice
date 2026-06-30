@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：用哈希表记录已经遍历过的数字和下标，遇到当前数时直接查找 target - 当前数。
+// 关键点：查找补数要发生在写入当前数之前，避免同一个元素被使用两次。
+// 复杂度：时间 O(n)，空间 O(n)。
 func twoSum(nums []int, target int) []int {
     
 }

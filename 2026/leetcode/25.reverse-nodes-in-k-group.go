@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：每次检查后面是否有完整 k 个节点，有则断开这一段、反转、再接回原链表。
+// 关键点：不足 k 个节点时保持原顺序；反转后原段首会变成段尾，用它连接下一段。
+// 复杂度：时间 O(n)，空间 O(1) 额外空间。
 /**
  * Definition for singly-linked list.
  * type ListNode struct {

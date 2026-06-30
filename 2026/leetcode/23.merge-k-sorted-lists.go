@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：分治合并 K 个有序链表，把区间拆成左右两半分别合并，再合并两个有序链表。
+// 关键点：递归边界处理空区间和单链表区间，合并阶段复用原链表节点。
+// 复杂度：时间 O(N log k)，空间 O(log k) 递归栈，N 为所有节点总数。
 /**
  * Definition for singly-linked list.
  * type ListNode struct {

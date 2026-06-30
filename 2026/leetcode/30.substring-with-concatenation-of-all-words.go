@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：所有单词长度相同，因此按 wordLen 个偏移分组做滑动窗口。
+// 关键点：窗口内按单词切片计数，遇到非法单词清空窗口，某个单词超频时从左侧收缩。
+// 复杂度：时间 O(n)，空间 O(words.length)。
 func findSubstring(s string, words []string) []int {
 	m := map[string]int{}
 	for i := 0; i < len(words); i++ {

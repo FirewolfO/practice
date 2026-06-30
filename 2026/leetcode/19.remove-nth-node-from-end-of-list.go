@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：快慢指针保持 n 个节点的间距，快指针到尾时慢指针定位待删除节点前驱。
+// 关键点：虚拟头节点可以统一处理删除头节点的场景。
+// 复杂度：时间 O(n)，空间 O(1)。
 /**
  * Definition for singly-linked list.
  * type ListNode struct {

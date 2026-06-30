@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：在较短数组上二分分割点，使两个数组左半部分都不大于右半部分。
+// 关键点：用边界哨兵处理分割点落在数组两端的情况，再根据总长度奇偶返回中位数。
+// 复杂度：时间 O(log(min(m,n)))，空间 O(1)。
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length){

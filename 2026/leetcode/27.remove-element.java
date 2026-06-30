@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：用写指针覆盖保留下来的元素，把不等于 val 的值依次放到数组前部。
+// 关键点：题目只关心返回长度以内的内容，后半段遗留值无需处理。
+// 复杂度：时间 O(n)，空间 O(1)。
 class Solution {
     public int removeElement(int[] nums, int val) {
         int count = 0 ;

@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：从左到右扫描罗马数字，优先识别 IV、IX、XL、XC、CD、CM 这类双字符组合。
+// 关键点：当当前位置可能构成减法组合时先查两个字符，命中后跳过下一位。
+// 复杂度：时间 O(n)，空间 O(1)。
 func romanToInt(s string) int {
 	vv := map[string]int{
 		"M":  1000,

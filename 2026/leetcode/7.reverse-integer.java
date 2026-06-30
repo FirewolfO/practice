@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：不断取出 x 的末位数字，累加到反转结果 res 中。
+// 关键点：每次乘 10 前先判断是否会超出 32 位有符号整数范围。
+// 复杂度：时间 O(log|x|)，空间 O(1)。
 class Solution {
     public int reverse(int x) {
         int res = 0;

@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：把每个数字映射到候选字母，递归/回溯拼接每一位的所有组合。
+// 关键点：递归到末尾时返回空串作为拼接基底，再逐层组合当前字符和后续结果。
+// 复杂度：时间 O(4^n * n)，空间 O(4^n * n) 用于结果集。
 
 import java.util.ArrayList;
 import java.util.Arrays;

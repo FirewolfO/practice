@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：数组已排序，用慢指针维护去重后数组的写入位置。
+// 关键点：快指针遇到新值时写到慢指针位置，再推进慢指针。
+// 复杂度：时间 O(n)，空间 O(1)。
 func removeDuplicates(nums []int) int {
 	count := 1
 	for i := 1; i < len(nums); i++ {

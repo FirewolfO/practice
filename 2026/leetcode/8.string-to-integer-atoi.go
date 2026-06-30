@@ -11,6 +11,9 @@ import "math"
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：依次跳过前导空格、读取符号、累积连续数字。
+// 关键点：累积过程中及时按 32 位整数上下界截断，遇到非数字立即停止。
+// 复杂度：时间 O(n)，空间 O(1)。
 func myAtoi(s string) int {
 	i := 0
 	ss := []rune(s)

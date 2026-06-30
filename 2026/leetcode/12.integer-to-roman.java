@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：按千、百、十、个位拆分数字，并根据罗马数字规则拼接符号。
+// 关键点：4 和 9 需要使用减法表示，5 到 8 先放五位符号再补一位符号。
+// 复杂度：时间 O(1)，空间 O(1)，因为输入范围固定。
 class Solution {
     public String intToRoman(int num) {
         char[] fuhao10 = new char[]{'M','C','X','I'};

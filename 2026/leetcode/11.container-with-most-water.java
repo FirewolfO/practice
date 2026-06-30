@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：双指针从两端向中间收缩，每次用较短边决定当前容量。
+// 关键点：移动较短的那一侧才可能得到更高的边界，从而产生更大的面积。
+// 复杂度：时间 O(n)，空间 O(1)。
 class Solution {
     public int maxArea(int[] height) {
         int left = 0;

@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：使用虚拟头节点，每次取相邻两个节点并调整指针完成交换。
+// 关键点：交换后前驱指针移动到这一组的尾节点，继续处理下一组。
+// 复杂度：时间 O(n)，空间 O(1)。
 /**
  * Definition for singly-linked list.
  * public class ListNode {

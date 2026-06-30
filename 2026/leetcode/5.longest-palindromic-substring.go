@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：枚举每个字符作为回文中心，分别向两侧扩展奇数和偶数长度回文。
+// 关键点：扩展结束后返回真实边界，并用最长边界截取答案。
+// 复杂度：时间 O(n^2)，空间 O(n) 或 O(1)，取决于语言中的字符串切片/字符数组。
 func longestPalindrome(s string) string {
 	if len(s) == 0 {
 		return ""

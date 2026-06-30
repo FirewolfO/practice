@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：动态规划判断 s 的前 i 个字符能否匹配 p 的前 j 个字符。
+// 关键点：'*' 可以让前一个模式出现 0 次，也可以在当前字符匹配时继续消耗 s。
+// 复杂度：时间 O(mn)，空间 O(mn)。
 func isMatch(s string, p string) bool {
 	m, n := len(s)+1, len(p)+1
 	ss, pp := []rune(s), []rune(p)

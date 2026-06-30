@@ -6,6 +6,9 @@
  */
 
 // @lc code=start
+// 核心思路：按链表节点从低位到高位逐位相加，用 carry 保存进位。
+// 关键点：循环条件包含 carry != 0，保证最高位进位也能生成新节点。
+// 复杂度：时间 O(max(m,n))，空间 O(max(m,n)) 用于结果链表。
 /**
  * Definition for singly-linked list.
  * public class ListNode {

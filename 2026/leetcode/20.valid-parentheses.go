@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：用栈保存尚未匹配的左括号，遇到右括号时检查栈顶是否对应。
+// 关键点：右括号到来时栈为空或类型不匹配都立即返回 false，最后栈必须为空。
+// 复杂度：时间 O(n)，空间 O(n)。
 func isValid(s string) bool {
 	m := map[rune]rune{
 		']': '[',

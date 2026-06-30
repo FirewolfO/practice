@@ -10,6 +10,9 @@
 
 # @lcpr-template-end
 # @lc code=start
+# 核心思路：把除数不断倍增，找到不超过被除数的最大倍数后递归/迭代扣减。
+# 关键点：统一用正负号处理结果方向，并对 32 位整数溢出边界做截断。
+# 复杂度：时间 O(log|dividend|)，空间 O(log|dividend|) 或 O(1)，取决于实现是否递归。
 import math
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:

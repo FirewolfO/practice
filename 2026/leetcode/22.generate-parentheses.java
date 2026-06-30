@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：回溯构造括号序列，记录已经使用的左括号和右括号数量。
+// 关键点：左括号数量不超过 n，右括号数量不能超过左括号数量，才能保证前缀合法。
+// 复杂度：时间和空间主要由答案数量决定，约为 O(C_n * n)。
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：反转整数后与原数比较，判断十进制表示是否前后对称。
+// 关键点：负数直接不是回文，反转时按位取模和整除推进。
+// 复杂度：时间 O(log n)，空间 O(1)。
 class Solution {
     public boolean isPalindrome(int x) {
         if(x < 0 || (x%10 == 0 && x != 0)){

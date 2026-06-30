@@ -12,6 +12,9 @@ import (
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：排序后固定一个数，双指针枚举另外两个数，并记录最接近 target 的和。
+// 关键点：当前和小于 target 时左指针右移，当前和大于 target 时右指针左移。
+// 复杂度：时间 O(n^2)，空间 O(log n) 或 O(1)，取决于排序实现。
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	res := nums[0] + nums[1] + nums[2]

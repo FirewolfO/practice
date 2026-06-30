@@ -9,6 +9,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：按 Z 字形书写顺序把字符放入各行/矩阵，再按行读取结果。
+// 关键点：numRows 为 1 或字符串长度不超过行数时无需转换，直接返回原串。
+// 复杂度：时间 O(n)，空间 O(n)。
 func convert(s string, numRows int) string {
 	if numRows == 1 || len(s) <= numRows {
 		return s

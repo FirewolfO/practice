@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+// 核心思路：排序后固定前两个数，在剩余区间用双指针寻找满足 target 的后两个数。
+// 关键点：多层枚举都要跳过重复值，并用更宽的整数类型避免四数相加溢出。
+// 复杂度：时间 O(n^3)，空间 O(log n) 或 O(1)，取决于排序实现。
 
 import java.util.ArrayList;
 import java.util.Arrays;
